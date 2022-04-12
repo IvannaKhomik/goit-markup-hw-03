@@ -10,10 +10,40 @@
   --secondary-back-color: #F5F4FA;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--title-color);
   color: var(--primary-text-color);
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  margin: 0;
+}
+
+ul, 
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .visually-hidden {
@@ -27,6 +57,13 @@ body {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 }
 
 .list {
@@ -43,6 +80,31 @@ body {
 }
 
 /* --------------HEADER-------------- */
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+} 
+
+.header-nav-list {
+  display: flex;
+}
+
+.header-nav .item +.item,
+.header-item:last-child {
+  margin-left: 50px;
+}
+
+.header-logo {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-right: 93px;
+}
+
 .header-logo,
 .footer-logo {
   font-family: 'Raleway', sans-serif;
@@ -58,8 +120,17 @@ body {
   color: var(--logo-accent-color);
 }
 
+.header-list {
+  display: flex;
+  margin-left: auto;
+}
+
 .header-nav-link,
 .header-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -84,6 +155,7 @@ body {
 .hero {
   background-color: var(--back-color);
 }
+
 .hero-title {
   font-weight: 900;
   font-size: 44px;
@@ -95,10 +167,22 @@ body {
   color: var(--title-color);
 }
 
+.hero-wrap {
+  padding: 200px 0;
+}
+
 .hero-btn {
   background-color: var(--accent-color);
-  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px; */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 32px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  min-width: 200px;
+
+
   font-family: inherit;
   font-weight: 700;
   line-height: 1.88;
@@ -114,6 +198,19 @@ body {
 }
 
 /* --------------BENEFITS SECTION-------------- */
+.benefits-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.benefits-list .item {
+  flex-basis: calc((100%-90)/4);
+  margin-right: 30px;
+}
+
+.benefits-list .item:last-child {
+  margin-right: 0px;
+}
 .benefits-subtitle {
   font-weight: 700;
   font-size: 14px;
@@ -125,15 +222,30 @@ body {
 }
 
 .benefits-desc {
-font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
+  margin:10px 0 0;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 
-color: var(--secondary-text-color);
+  color: var(--secondary-text-color);
 }
 
 
 /* --------------WORKS SECTION-------------- */
+.works {
+  padding-top: 0;
+}
+
+.works-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.works-list .item {
+  padding-bottom: 0;
+}
+
 .works-title {
   font-size: 36px;
   line-height: 1.17;
@@ -147,6 +259,13 @@ color: var(--primary-text-color);
 .team {
   background-color: var(--secondary-back-color);
 }
+
+.team-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
 .team-title {
   font-size: 36px;
   line-height: 1.17;
@@ -161,20 +280,22 @@ color: var(--primary-text-color);
 }
 
 .team-subtitle {
-font-weight: 500;
-line-height: 1.19;
-text-align: center;
-letter-spacing: 0.03em;
+  margin-top: 30px;
+  font-weight: 500;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
 
-color: var(--primary-text-color);
+  color: var(--primary-text-color);
 }
 
 .team-desc {
-line-height: 1.19;
-text-align: center;
-letter-spacing: 0.03em;
+  margin: 10px 0 30px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
 
-color: var(--secondary-text-color);
+  color: var(--secondary-text-color);
 }
 
 /* --------------PORTFOLIO--------------*/
@@ -215,7 +336,16 @@ color: var(--secondary-text-color);
 /* --------------FOOTER-------------- */
 
 .footer {
+  padding: 60px 0;
   background: var(--back-color);
+}
+
+.footer-adress {
+  margin-top: 20px;
+}
+
+.footer-list .item +.item {
+  margin-top: 9px;
 }
 
 .footer-logo-span {
