@@ -80,7 +80,7 @@ ol {
 }
 
 /* --------------HEADER-------------- */
-.header {
+.header-wrap {
   display: flex;
   align-items: center;
 }
@@ -149,6 +149,11 @@ ol {
 .header-link:focus,
 .active {
   color: var(--accent-color);
+}
+
+.underline {
+  height: 1px;
+  background-color: #ECECEC;
 }
 
 /* --------------HERO SECTION-------------- */
@@ -299,7 +304,23 @@ color: var(--primary-text-color);
 }
 
 /* --------------PORTFOLIO--------------*/
+.portfolio-list {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-item {
+  margin-left: 8px;
+}
+
+.portfolio-item:first-child {
+  margin-left: 0;
+}
+
 .portfolio-btn {
+  padding: 6px 22px;
+  border: 1px solid transparent;
+  border-radius: 4px;
   background-color: var(--secondary-back-color);
   font-family: inherit;
   font-style: inherit;
@@ -315,6 +336,17 @@ color: var(--primary-text-color);
 .portfolio-btn:focus {
   background-color: var(--accent-color);
   color: var(--title-color);
+}
+
+.portfolio-cards {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-cards .item {
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
 .portfolio-subtitle {
