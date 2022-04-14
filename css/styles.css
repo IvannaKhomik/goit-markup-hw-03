@@ -103,7 +103,6 @@ ol {
 .header-logo {
   padding-top: 24px;
   padding-bottom: 24px;
-  margin-right: 93px;
 }
 
 .header-logo,
@@ -119,6 +118,10 @@ ol {
 
 .logo-span {
   color: var(--logo-accent-color);
+}
+
+.header-nav-list {
+  margin-left: 93px;
 }
 
 .header-list {
@@ -162,6 +165,10 @@ ol {
   background-color: var(--back-color);
 }
 
+.hero > .container {
+  width: 691px;
+}
+
 .hero-title {
   font-weight: 900;
   font-size: 44px;
@@ -173,7 +180,7 @@ ol {
   color: var(--title-color);
 }
 
-.hero-wrap {
+.hero {
   padding: 200px 0;
 }
 
@@ -239,17 +246,22 @@ ol {
 
 /* --------------WORKS SECTION-------------- */
 .works {
-  padding-top: 0;
+  padding-bottom: 94px;
 }
 
 .works-list {
   display: flex;
-  justify-content: space-between;
   margin-top: 50px;
 }
 
-.works-list .item {
-  padding-bottom: 0;
+.works-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.works-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .works-title {
@@ -268,7 +280,6 @@ color: var(--primary-text-color);
 
 .team-list {
   display: flex;
-  justify-content: space-between;
   margin-top: 50px;
 }
 
@@ -285,8 +296,23 @@ color: var(--primary-text-color);
   background-color: var(--title-color);
 }
 
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.team-wrap {
+  margin: 30px 0;
+}
+
 .team-subtitle {
-  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.19;
   text-align: center;
@@ -296,7 +322,6 @@ color: var(--primary-text-color);
 }
 
 .team-desc {
-  margin: 10px 0 30px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
@@ -334,6 +359,7 @@ color: var(--primary-text-color);
   color: var(--primary-text-color);
 }
 
+.portfolio-btn.accent,
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   background-color: var(--accent-color);
